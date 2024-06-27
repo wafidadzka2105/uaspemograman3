@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Restfull_Api
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /users:
+    get:
+      tags:
+        - default
+      summary: GetAll
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: CreateData
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: mela
+                email: john@gmail.com
+                gender: Female
+                createdAt: '2022-03-29T03:23:37.000Z'
+                updatedAt: '2022-03-29T03:23:37.000Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /users/13:
+    patch:
+      tags:
+        - default
+      summary: UpdateData
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: jancok
+                email: adzka@gmail.com
+                gender: Male
+                createdAt: '2024-06-24T07:21:52.000Z'
+                updatedAt: '2024-06-24T07:21:52.000Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - default
+      summary: DeleteData
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: Cari Data
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
